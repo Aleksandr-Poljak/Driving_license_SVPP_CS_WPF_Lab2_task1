@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -52,19 +52,23 @@ namespace SVPP_CS_WPF_Lab2_task1_Driving_license
         /// </summary>
         private void init_DatePickers()
         {
+
             DateTime startRange = new DateTime(1900, 1, 1);
 
             // Настройка диапазона дат для выбора даты рождения.
             Calendar_DOB.DisplayDateStart = startRange;
             Calendar_DOB.DisplayDateEnd = DateTime.Now.Date.AddYears(-16);
+            Calendar_DOB.SelectedDate = null;
 
             // Настройка диапазона дат для выбора даты выдачи
             Calendar_ISS.DisplayDateStart = startRange;
             Calendar_ISS.DisplayDateEnd = DateTime.Now.Date;
+            Calendar_ISS.SelectedDate = null;
 
             // Настройка диапазона дат для выбора даты окончания лицензии
             Calendar_EXP.DisplayDateStart = startRange;
             Calendar_EXP.DisplayDateEnd = DateTime.Now.Date.AddYears(20);
+            Calendar_EXP.SelectedDate = null;
         }
 
         /// <summary>
